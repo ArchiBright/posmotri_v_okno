@@ -36,3 +36,31 @@ ul,
 ol {
   list-style: none;
 }
+
+.content {
+  display: flex;
+  margin: 133px 30px;
+  gap: 30px;
+  justify-content: flex-end;
+}
+
+.search-form {
+  display: flex;
+  gap: 40px;
+}
+
+.title {
+  margin-bottom: 26px;
+}
+
+.content__list {
+  max-height: 534px;
+  max-width: 399px;
+  overflow: scroll;
+  gap: 30px;
+}
+
+.search-form__submit-button {
+}
+
+

@@ -39,9 +39,18 @@ ol {
 
 .content {
   display: flex;
+  max-width: 1140px;
+  max-height: 534px;
   margin: 133px 30px;
   gap: 30px;
-  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.result__video-container {
+  position: relative;
+  max-width: 711px;
+  max-height: 386px;
+  margin-bottom: 16px;
 }
 
 .search-form {
@@ -53,14 +62,38 @@ ol {
   margin-bottom: 26px;
 }
 
-.content__list {
+.content__details {
   max-height: 534px;
   max-width: 399px;
   overflow: scroll;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   gap: 30px;
 }
 
-.search-form__submit-button {
+.preloader {
+  position: absolute;
+  height: 100%;
+}
+
+/* .content__list-item {
+  display: flex;
+  align-content: space-between;
+} */
+
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.content__video-card-thumbnail {
+  max-width: 194px;
 }
 
 

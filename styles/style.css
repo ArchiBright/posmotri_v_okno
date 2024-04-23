@@ -32,6 +32,10 @@ fieldset {
   padding: 0;
 }
 
+fieldset {
+  border: 0;
+}
+
 ul,
 ol {
   list-style: none;
@@ -58,6 +62,88 @@ ol {
   gap: 40px;
 }
 
+.search-form__label {
+  width: fit-content;
+}
+
+.title {
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 70.5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: gray;
+}
+
+.search-form__fieldset-title {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: left;
+}
+
+.search-form__textfield {
+  background-color: transparent;
+  border-right: 0;
+  border-left: 0;
+  border-top: 1px;
+  border-bottom: 1px;
+  gap: 10px;
+  border-color: white;
+  border-style: solid;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: left;
+  appearance: none;
+  color: white;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 30px;
+}
+
+.search-form__pseudo-checkbox {
+  display: flex;
+  width: 19px;
+  height: 19px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+input[type="checkbox"]:checked + span {
+  position: relative;
+  display: flex;
+  width: 19px;
+  height: 19px;
+  border: 1px solid white;
+}
+
+input[type="checkbox"]:checked + span::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top:1px;
+  left: 1px;
+  background-color: white;
+}
+
+.search-form__submit-button {
+  cursor: pointer;
+}
+
+input:focus {
+  outline-style: none;
+}
+
 .title {
   margin-bottom: 26px;
 }
@@ -66,6 +152,27 @@ ol {
   max-height: 534px;
   max-width: 399px;
   overflow: scroll;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: white;
+}
+
+.content__video-card-title {
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+}
+
+.content__video-card-description {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+  text-align: left;
 }
 
 .content__list {
@@ -95,5 +202,15 @@ ol {
 .content__video-card-thumbnail {
   max-width: 194px;
 }
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+} 
 
 

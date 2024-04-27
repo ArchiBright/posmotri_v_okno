@@ -78,14 +78,14 @@ ol {
   outline: none;
 }
 
+.search-form__label:focus-visible {
+  border: 1px solid white;
+}
+
 .search-form__label-text:hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   cursor: pointer;
-}
-
-.search-form__label-text:focus {
-  border: 1px solid white;
 }
 
 .title {
@@ -152,7 +152,7 @@ ol {
   border-width: 1px;
 }
 
-input[type="checkbox"]:checked + span {
+input[type="checkbox"] + span {
   position: relative;
   display: flex;
   width: 19px;
@@ -162,7 +162,7 @@ input[type="checkbox"]:checked + span {
 
 input[type="checkbox"]:checked + span::before {
   content: '';
-  position: absolute;
+  position: relative;
   width: 15px;
   height: 15px;
   top: 1px;
@@ -258,7 +258,6 @@ input:focus {
 }
 
 .preloader {
-  position: absolute;
   height: 100%;
 }
 

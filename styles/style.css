@@ -45,7 +45,7 @@ ol {
   display: flex;
   max-width: 1140px;
   max-height: 534px;
-  margin: 133px 30px;
+  margin: 266px 30px;
   gap: 30px;
   align-items: flex-end;
 }
@@ -130,14 +130,6 @@ ol {
 .search-form__textfield:active {
   border: 1px solid white;
 }
-
-/* .search-form__lable:has(:focus-visible) {
-  border: 5px solid white;
-} */
-
-/* .search-form__lable:focus {
-  outline: none;
-} */
 
 .search-form__label:has(.search-form__label:focus) {
   outline: none;

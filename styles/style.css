@@ -57,13 +57,35 @@ ol {
   margin-bottom: 16px;
 }
 
+.result__video {
+  width: 711px;
+  height: 386px;
+}
+
 .search-form {
   display: flex;
   gap: 40px;
+  align-items: flex-end;
 }
 
 .search-form__label {
   width: fit-content;
+  display: flex;
+  gap: 3px;
+}
+
+.search-form__label:focus {
+  outline: none;
+}
+
+.search-form__label-text:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  cursor: pointer;
+}
+
+.search-form__label-text:focus {
+  border: 1px solid white;
 }
 
 .title {
@@ -105,6 +127,26 @@ ol {
   color: white;
 }
 
+.search-form__textfield:active {
+  border: 1px solid white;
+}
+
+/* .search-form__lable:has(:focus-visible) {
+  border: 5px solid white;
+} */
+
+/* .search-form__lable:focus {
+  outline: none;
+} */
+
+.search-form__label:has(.search-form__label:focus) {
+  outline: none;
+}
+
+.search-form__label:has(.search-form__label:focus-visible) {
+  border: 1px solid white;
+}
+
 .search-form__checkbox-list {
   display: flex;
   gap: 30px;
@@ -136,6 +178,14 @@ input[type="checkbox"]:checked + span::before {
   background-color: white;
 }
 
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  border: 1px solid white;
+}
+
 .search-form__submit-button {
   cursor: pointer;
   background-color: transparent;
@@ -148,6 +198,14 @@ input[type="checkbox"]:checked + span::before {
   border: 1px solid white;
   width: 194px;
   height: 34px;
+}
+
+.search-form__submit-button:active {
+  background-color: gray;
+}
+
+.search-form__submit-button:hover {
+  text-decoration: underline;
 }
 
 .more-button {
@@ -181,7 +239,9 @@ input:focus {
 .content__card-link {
   text-decoration: none;
   color: white;
+  margin: 1px;
 }
+
 
 .content__video-card-title {
   font-family: Oswald;
@@ -203,7 +263,6 @@ input:focus {
   display: flex;
   flex-direction: column;
   position: relative;
-  gap: 30px;
 }
 
 .preloader {
@@ -211,10 +270,13 @@ input:focus {
   height: 100%;
 }
 
-/* .content__list-item {
-  display: flex;
-  align-content: space-between;
-} */
+.content__list-item:active {
+  background-color: grey;
+}
+
+.content__video-card-description-container:hover {
+  text-decoration: underline;
+}
 
 .content__video-card {
   display: flex;

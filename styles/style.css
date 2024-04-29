@@ -108,6 +108,7 @@ ol {
   font-weight: 400;
   line-height: 21.6px;
   text-align: left;
+  margin-bottom: 5px;
 }
 
 .search-form__textfield {
@@ -126,6 +127,8 @@ ol {
   text-align: left;
   appearance: none;
   color: white;
+  width: 225px;
+  max-height: 27px;
 }
 
 .search-form__textfield:active {

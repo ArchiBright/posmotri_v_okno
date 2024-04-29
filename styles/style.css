@@ -43,9 +43,11 @@ ol {
 
 .content {
   display: flex;
-  margin: 133px 30px 0;
+  margin: 270px 30px 0;
   gap: 30px;
   align-items: flex-end;
+  justify-self: center;
+  align-self: center;
 }
 
 .result__video-container {

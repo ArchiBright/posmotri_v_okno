@@ -72,7 +72,6 @@ ol {
 .search-form__label {
   width: fit-content;
   display: flex;
-  gap: 3px;
 }
 
 .search-form__label:focus {
@@ -81,6 +80,10 @@ ol {
 
 .search-form__label:focus-visible {
   border: 1px solid white;
+}
+
+.search-form__label-text {
+  margin-left: 3px;
 }
 
 .search-form__label-text:hover {
@@ -145,7 +148,7 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 30px;
+  gap: 15px;
 }
 
 .search-form__pseudo-checkbox {

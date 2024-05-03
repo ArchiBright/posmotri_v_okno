@@ -59,8 +59,10 @@ ol {
 }
 
 .result__video {
-  width: 711px;
-  height: 386px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
@@ -71,6 +73,7 @@ ol {
 }
 
 .search-form__label {
+  align-content: center;
   width: fit-content;
   display: flex;
 }
@@ -79,7 +82,7 @@ ol {
   outline: none;
 }
 
-.search-form__label:focus-visible {
+.search-form__label:has(:focus-visible) {
   border: 1px solid white;
 }
 
@@ -87,14 +90,14 @@ ol {
   margin-left: 3px;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   cursor: pointer;
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 70.5px;
@@ -103,11 +106,11 @@ ol {
 }
 
 .content__accent {
-  color: gray;
+  color: #545050;
 }
 
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
@@ -124,7 +127,7 @@ ol {
   gap: 10px;
   border-color: white;
   border-style: solid;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
@@ -183,13 +186,13 @@ input[type="checkbox"]:checked + span::before {
 }
 
 .button:focus-visible {
-  border: 1px solid white;
+  outline: 1px solid white;
 }
 
-.search-form__submit-button {
+.button {
   cursor: pointer;
   background-color: transparent;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 21.6px;
@@ -200,24 +203,15 @@ input[type="checkbox"]:checked + span::before {
   height: 34px;
 }
 
-.search-form__submit-button:active {
-  background-color: gray;
+.button:active {
+  background-color: #545050;
 }
 
-.search-form__submit-button:hover {
+.button:hover {
   text-decoration: underline;
 }
 
 .more-button {
-  cursor: pointer;
-  background-color: transparent;
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 21.6px;
-  text-align: center;
-  color: white;
-  border: 1px solid white;
   width: 399px;
   height: 34px;
 }
@@ -233,52 +227,62 @@ input:focus {
 .content__details {
   max-height: 534px;
   max-width: 399px;
-  overflow: scroll;
 }
 
 .content__card-link {
   text-decoration: none;
   color: white;
-  margin: 1px;
+  margin: 2px;
 }
 
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
   text-align: left;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
+  max-width: 200px;
+  text-transform: uppercase;
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
   text-align: left;
+  max-width: 200px;
 }
 
 .content__list {
   display: flex;
   flex-direction: column;
   position: relative;
-  gap: 30px;
+  max-height: 298px;
+  overflow: scroll;
 }
 
-.preloader {
-  height: 100%;
-}
+.content__list-item:not(:last-of-type) {
+  margin-bottom: 30px;
+} 
 
 .content__list-item {
   max-height: 107px;
 }
 
 .content__video-card:active {
-  background-color: grey;
+  background-color: #545050;
 }
 
-.content__video-card-description-container:hover {
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
   text-decoration: underline;
 }
 
@@ -289,11 +293,8 @@ input:focus {
   justify-content: space-between;
 }
 
-.content__video-card-title {
-  text-transform: uppercase;
-}
-
 .content__video-card-thumbnail {
+  object-position: center;
   max-width: 194px;
 }
 

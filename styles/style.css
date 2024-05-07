@@ -43,6 +43,7 @@ ol {
 }
 
 .content {
+  width: 1140px;
   margin: auto 30px;
   display: flex;
   gap: 30px;
@@ -218,7 +219,7 @@ input:focus {
 }
 
 .content__details {
-  width: 399px;
+  width: 100%;
 }
 
 .content__card-link {
@@ -226,6 +227,10 @@ input:focus {
   text-decoration: none;
   color: white;
   margin: 2px;
+}
+
+.content__card-link:active {
+  background-color: #545050;
 }
 
 .content__card-link:focus {
